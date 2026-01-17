@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Curriculo Jovem Aprendiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page builder">
+      <section class="panel form-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Montagem rapida</p>
+            <h1>Edite seu curriculo</h1>
+            <p class="lead">
+              Preencha os campos e escolha quais secoes aparecem na
+              previsualizacao.
+            </p>
+          </div>
+          <button class="print-button" type="button">Exportar PDF</button>
+        </div>
+        <form class="profile-form" id="profileForm">
+          <div class="field-grid">
+            <label class="field">
+              <span>Nome completo</span>
+              <input type="text" name="name" value="Nome Sobrenome" />
+            </label>
+            <label class="field">
+              <span>Titulo profissional</span>
+              <input type="text" name="headline" value="Jovem aprendiz" />
+            </label>
+            <label class="field">
+              <span>Idade</span>
+              <input type="text" name="age" value="16 anos" />
+            </label>
+            <label class="field">
+              <span>Cidade e estado</span>
+              <input type="text" name="location" value="Sao Paulo, SP" />
+            </label>
+            <label class="field">
+              <span>Telefone</span>
+              <input type="tel" name="phone" value="(11) 99999-0000" />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" value="nome@email.com" />
+            </label>
+            <label class="field">
+              <span>LinkedIn</span>
+              <input type="text" name="linkedin" value="linkedin.com/in/nome" />
+            </label>
+            <label class="field wide">
+              <span>Resumo</span>
+              <textarea name="summary" rows="3">
+Estudante dedicado, buscando primeira oportunidade para desenvolver habilidades profissionais e contribuir com energia e responsabilidade.</textarea>
+            </label>
+            <label class="field wide">
+              <span>Objetivo</span>
+              <textarea name="objective" rows="3">
+Atuar como jovem aprendiz em uma empresa que valorize o desenvolvimento humano, com foco em atendimento, rotinas administrativas e trabalho em equipe.</textarea>
+            </label>
+            <label class="field wide">
+              <span>Formacao</span>
+              <textarea name="education" rows="4">
+Ensino Medio | Escola Estadual Exemplo | 2022 a 2024
+Curso Complementar | Pacote Office Basico | 40h</textarea>
+            </label>
+            <label class="field wide">
+              <span>Projetos e experiencias</span>
+              <textarea name="projects" rows="5">
+Feira de Ciencias | Equipe de comunicacao | 2023
+Criei apresentacao, organizei cronograma e apoiei na apresentacao do projeto.
+
+Voluntariado | Campanha de arrecadacao | 2022
+Atendimento ao publico e registro de itens com planilhas simples.</textarea>
+            </label>
+            <label class="field wide">
+              <span>Habilidades (separe por virgula)</span>
+              <input
+                type="text"
+                name="skills"
+                value="Comunicacao, Organizacao, Trabalho em equipe, Pacote Office, Aprendizado rapido"
+              />
+            </label>
+            <label class="field wide">
+              <span>Informacoes adicionais (separe por linha)</span>
+              <textarea name="extras" rows="3">
+Ingles basico (leitura e escrita).
+Interesse em areas administrativas e atendimento.
+Responsavel por tarefas domesticas e organizacao da rotina.</textarea>
+            </label>
+            <label class="field">
+              <span>Layout</span>
+              <select name="layout">
+                <option value="modern" selected>Moderno</option>
+                <option value="classic">Tradicional A4</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Paleta de cores</span>
+              <select name="theme">
+                <option value="warm" selected>Areia quente</option>
+                <option value="navy">Azul profissional</option>
+                <option value="forest">Verde classico</option>
+                <option value="graphite">Cinza minimalista</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="toggles">
+            <p>Mostrar secoes:</p>
+            <label class="toggle">
+              <input type="checkbox" data-target="objective" checked />
+              <span>Objetivo</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" data-target="education" checked />
+              <span>Formacao</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" data-target="projects" checked />
+              <span>Projetos</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" data-target="skills" checked />
+              <span>Habilidades</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" data-target="extras" checked />
+              <span>Informacoes adicionais</span>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section class="preview panel" id="preview">
+        <header class="hero">
+          <div class="hero-text">
+            <p class="eyebrow">Curriculo para Jovem Aprendiz</p>
+            <h1>
+              <span data-bind="name">Nome Sobrenome</span>
+              <strong data-bind="headline">Jovem aprendiz</strong>
+            </h1>
+            <p class="lead" data-bind="summary">
+              Estudante dedicado, buscando primeira oportunidade para
+              desenvolver habilidades profissionais e contribuir com energia e
+              responsabilidade.
+            </p>
+          </div>
+          <div class="hero-card">
+            <div class="avatar" data-bind="initials">NS</div>
+            <div class="hero-info">
+              <p data-bind="age">16 anos</p>
+              <p data-bind="location">Sao Paulo, SP</p>
+              <p data-bind="phone">(11) 99999-0000</p>
+              <p data-bind="email">nome@email.com</p>
+              <p data-bind="linkedin">linkedin.com/in/nome</p>
+            </div>
+          </div>
+        </header>
+
+        <section class="grid">
+          <article class="panel highlight" data-section="objective">
+            <h2>Objetivo</h2>
+            <p data-bind="objective">
+              Atuar como jovem aprendiz em uma empresa que valorize o
+              desenvolvimento humano, com foco em atendimento, rotinas
+              administrativas e trabalho em equipe.
+            </p>
+          </article>
+
+          <article class="panel" data-section="education">
+            <h2>Formacao</h2>
+            <div class="item-list" data-bind="education"></div>
+          </article>
+
+          <article class="panel" data-section="projects">
+            <h2>Projetos e Experiencias</h2>
+            <div class="item-list" data-bind="projects"></div>
+          </article>
+
+          <article class="panel" data-section="skills">
+            <h2>Habilidades</h2>
+            <div class="tags" data-bind="skills"></div>
+          </article>
+
+          <article class="panel wide" data-section="extras">
+            <h2>Informacoes adicionais</h2>
+            <ul data-bind="extras"></ul>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
