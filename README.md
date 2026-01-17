@@ -25,4 +25,9 @@ Gerador simples de curriculo em HTML/CSS/JS com formulario de edicao, previsuali
 
 ## Licenca
 
+
 Distribuido sob a licenca MIT. Veja `LICENSE`.
+
+
+## Testando git
+        
